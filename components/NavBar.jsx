@@ -60,7 +60,9 @@ export function DesktopNav() {
         <div>Hi, Sudhanshu</div>
       </div>
       <nav className="flex items-center gap-2">
-        <IoIosStats size={20} />
+        <Link href="/stats" className="">
+          <IoIosStats size={25} className="hover:scale-125 transition-all duration-200" />
+        </Link>
         <SignOutButton />
       </nav>
     </header>
