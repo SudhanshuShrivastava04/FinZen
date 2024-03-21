@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { IoIosStats } from "react-icons/io";
@@ -21,7 +20,6 @@ export function SignOutButton() {
 }
 
 export function MobileNav() {
-  const [open, setOpen] = useState(false);
   return (
     <>
       <Sheet>
