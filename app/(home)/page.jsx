@@ -2,7 +2,9 @@
 
 import { Button } from "@/components/ui/button";
 import { currencyFormatter } from "@/lib/utils";
+import IncomeDialog from "./_components/IncomeModal";
 import Transition from "@/lib/transition";
+import ExpenseDialog from "./_components/ExpenseModal";
 
 function Home() {
   return (
@@ -13,15 +15,11 @@ function Home() {
       </section>
 
       <section className="flex items-center gap-4 py-4">
-        <Button className="bg-slate-700 border border-slate-700 text-lime-400 hover:scale-110 duration-200 transition">
-          + Expenses
-        </Button>
-        <Button className="border border-lime-400 text-lime-400 hover:scale-110 duration-200 transition hover:bg-lime-400 hover:text-slate-700">
-          + Income
-        </Button>
+        <ExpenseDialog />
+        <IncomeDialog />
       </section>
     </main>
   );
 }
 
-export default Home;
+export default Transition(Home);
