@@ -4,6 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { IoIosStats } from "react-icons/io";
 import Link from "next/link";
+import TransitionLink from "./TransitionLink";
 import { GiHamburgerMenu } from "react-icons/gi";
 import {
   Sheet,
@@ -63,6 +64,7 @@ export function DesktopNav() {
         <Link href="/stats" className="">
           <IoIosStats size={25} className="hover:scale-125 transition-all duration-200" />
         </Link>
+        {/* <TransitionLink href="/stats" /> */}
         <SignOutButton />
       </nav>
     </header>
