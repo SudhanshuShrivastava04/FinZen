@@ -3,7 +3,8 @@
 import Home from "@/app/(home)/page";
 import ExpenseTable from "@/components/ExpenseTable";
 import { motion, AnimatePresence } from "framer-motion";
-import Transition from "@/lib/transition";
+import ContactToolTip from "@/components/ContactToolTip";
+
 
 function Page() {
   return (

@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import ContactToolTip from "@/components/ContactToolTip";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,9 @@ export default function layout({ children }) {
         <div className="max-w-7xl mx-auto py-6 px-4">
           <Navbar />
           {children}
+          <div className="absolute right-12 bottom-12 p-4 mx-auto">
+            <ContactToolTip />
+          </div>
         </div>
       </body>
     </html>
