@@ -30,7 +30,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "components/TransitionLink.jsx"  ],
+, "components/TransitionLink.jsx", "app/(home)/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]

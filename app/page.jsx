@@ -1,27 +1,30 @@
-import { Button } from "@/components/ui/button";
-import { currencyFormatter } from "@/lib/utils";
+"use client";
 
-export default function Home() {
+import Home from "@/app/(home)/page";
+import ExpenseTable from "@/components/ExpenseTable";
+import { motion, AnimatePresence } from "framer-motion";
+
+export default function Page() {
   return (
-    <main>
-      <section>
-        <small className="text-gray-400 text-md">My Balance</small>
-        <h2 className="text-4xl font-bold">{currencyFormatter(10000)}</h2>
-      </section>
-
-      <section className="flex items-center gap-4 py-4">
-        <Button className="bg-slate-700 border border-slate-700 text-lime-400 hover:scale-110 duration-200 transition">
-          + Expenses
-        </Button>
-        <Button className="border border-lime-400 text-lime-400 hover:scale-110 duration-200 transition hover:bg-lime-400 hover:text-slate-700">
-          + Income
-        </Button>
-      </section>
-
-      <section className="py-6 w-full">
-        <h3 className="text-2xl">My Expenses</h3>
-        <div>Transaction Table</div>
-      </section>
-    </main>
+    <AnimatePresence mode="wait">
+      <motion.div>
+        <Home />
+        <ExpenseTable />
+        <motion.div
+          className="slide-in absolute top-0 left-0 w-full h-screen bg-white origin-bottom"
+          initial={{ scaleY: 0 }}
+          animate={{ scaleY: 0 }}
+          exit={{ scaleY: 1 }}
+          transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
+        />
+        <motion.div
+          className="slide-out absolute top-0 left-0 w-full h-screen bg-white origin-top"
+          initial={{ scaleY: 1 }}
+          animate={{ scaleY: 0 }}
+          exit={{ scaleY: 0 }}
+          transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
+        />
+      </motion.div>
+    </AnimatePresence>
   );
 }

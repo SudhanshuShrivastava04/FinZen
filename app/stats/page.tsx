@@ -1,5 +1,8 @@
+"use client";
 
-export default function Home() {
+import Transition from "@/lib/transition";
+
+function Stats() {
   return (
     <main>
       <div className="">
@@ -8,3 +11,5 @@ export default function Home() {
     </main>
   );
 }
+
+export default Transition(Stats);
